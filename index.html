@@ -461,7 +461,7 @@ document.getElementById('btn-send').addEventListener('click', async () => {
   const userId = tg?.initDataUnsafe?.user?.id;
   if (!userId) { showToast('Open inside Telegram first', true); return; }
 
-  if (GAS_URL === 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+  if (GAS_URL === 'https://script.google.com/macros/s/AKfycbwwYzudJ_uL68hddzdcPeI1DfaIB_Hm8cWM471qtA9Al_7gr9V5z9qiLPL6iKxz2aw/exec') {
     showToast('GAS URL not configured', true); return;
   }
 
