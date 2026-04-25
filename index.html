@@ -469,7 +469,7 @@ document.getElementById('btn-send').addEventListener('click', async () => {
     const base64 = out.toDataURL('image/jpeg', 0.92).split(',')[1];
     const resp = await fetch(GAS_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain' },   // ← fixes CORS preflight
       body: JSON.stringify({ userId, image: base64 }),
     });
     const json = await resp.json();
